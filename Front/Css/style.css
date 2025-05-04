@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--cinza-claro);
+  background: linear-gradient(135deg, #f5f5f5, #e0e7ea); 
   color: var(--cinza-escuro);
   margin: 0;
   padding: 0;
@@ -30,11 +30,16 @@ a:link, a:active, a:visited{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
 }
 
 #conteiner{
   width: 1080px;
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 #bemvindos{
   font-family: Poppins, sans-serif;
@@ -43,6 +48,7 @@ a:link, a:active, a:visited{
   border-left: 6px solid var(--vermelho-uepb);
   font-size: 20px;
   color: #222;
+  border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
   
@@ -122,6 +128,7 @@ aside{
   background: #ffffff;
   padding-bottom: 30px;
   margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve para destacar */
 }
 
 aside#news {
@@ -182,23 +189,6 @@ aside#news a.button {
 aside#news a.button:hover {
   background-color: #8b1a1a;
 }
-.card-campus {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  padding: 16px;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-.card-campus:hover {
-  transform: scale(1.03);
-}
-.card-campus,
-button,
-a {
-  transition: all 0.3s ease;
-}
-
 
 h3{
   color: #000000;
