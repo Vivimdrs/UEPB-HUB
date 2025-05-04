@@ -1,4 +1,4 @@
-/*limpando formatação padrão*/
+
 :root {
   --vermelho-uepb: #b22222;
   --cinza-claro: #f5f5f5;
@@ -30,14 +30,14 @@ a:link, a:active, a:visited{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #conteiner{
   width: 1080px;
   margin: 40px auto;
   padding: 30px;
-  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+  background-color: rgba(255, 255, 255, 0.9); 
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -51,6 +51,7 @@ a:link, a:active, a:visited{
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+
   
 header {
   background-color: var(--vermelho-uepb);
@@ -90,7 +91,7 @@ nav ul li a:hover{
 }
 article#uepbs-ladoesquerdo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* duas colunas */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 24px;
   padding: 40px;
   max-width: 1000px;
@@ -104,7 +105,7 @@ article#uepbs-ladoesquerdo {
 .campus img {
   width: 330px;
   height: 170px;
-  object-fit: cover; /* garante que todas fiquem do mesmo tamanho e bem cortadas */
+  object-fit: cover; 
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease;
@@ -128,9 +129,8 @@ aside{
   background: #ffffff;
   padding-bottom: 30px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve para destacar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
-
 aside#news {
   width: 200px;
   background: #ffffff;
@@ -185,7 +185,10 @@ aside#news a.button {
   font-weight: bold;
   transition: background 0.3s ease;
 }
-
+aside#news a.button {
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 aside#news a.button:hover {
   background-color: #8b1a1a;
 }
