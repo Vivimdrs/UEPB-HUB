@@ -46,7 +46,7 @@ a:link, a:active, a:visited{
   background: #fefefe;
   padding: 20px;
   border-left: 6px solid var(--vermelho-uepb);
-  font-size: 20px;
+  font-size: 18px;
   color: #222;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -132,7 +132,7 @@ aside{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 aside#news {
-  width: 200px;
+  width: 190px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -192,6 +192,79 @@ aside#news a.button {
 aside#news a.button:hover {
   background-color: #8b1a1a;
 }
+
+.comunidades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 40px;
+  background: linear-gradient(to right, #f7f8fc, #eef1f5);
+  border-radius: 16px;
+}
+
+.comunidades-visitadas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.comunidades-em-linha {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* rolagem horizontal se ultrapassar largura */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.card-comunidade {
+  flex: 0 0 220px; /* largura fixa para manter alinhadas */
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.card-comunidade:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-comunidade img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-comunidade h5 {
+  margin: 12px 0 8px;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+
+.btn-entrar {
+  display: block;
+  margin: 16px auto;
+  padding: 6px 16px;
+  background-color: var(--vermelho-uepb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.btn-entrar:hover {
+  background-color: #9e1e1e;
+}
+
 
 h3{
   color: #000000;
