@@ -201,31 +201,29 @@ aside#news a.button:hover {
   background: linear-gradient(to right, #f7f8fc, #eef1f5);
   border-radius: 16px;
 }
-
-.comunidades-visitadas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  padding: 20px 0;
+.titulo-comunidades {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .comunidades-em-linha {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  overflow-x: auto; /* rolagem horizontal se ultrapassar largura */
-  gap: 20px;
-  padding: 20px 0;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
 }
 
 .card-comunidade {
-  flex: 0 0 220px; /* largura fixa para manter alinhadas */
-  background: #ffffff;
+  background-color: #fff;
+  padding: 16px;
+  width: 220px;
   border-radius: 10px;
-  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: 0.3s ease;
+  transition: transform 0.2s;
 }
 
 .card-comunidade:hover {
@@ -249,13 +247,13 @@ aside#news a.button:hover {
 .btn-entrar {
   display: block;
   margin: 16px auto;
-  padding: 6px 16px;
+  padding: 6px 14px;
   background-color: var(--vermelho-uepb);
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 0.75em;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s ease;
   
