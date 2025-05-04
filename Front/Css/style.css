@@ -27,7 +27,19 @@ a:link, a:active, a:visited{
   text-decoration: none;
 }
 #principal {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#principal-comunidades {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   background-color: rgba(255, 255, 255, 0.8);
@@ -40,6 +52,8 @@ a:link, a:active, a:visited{
   background-color: rgba(255, 255, 255, 0.9); 
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+
 }
 #bemvindos{
   font-family: Poppins, sans-serif;
@@ -63,24 +77,6 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   height: 30px;
  
-}
-
-nav ul{
-  list-style: none;
-  margin: 20px;
-  float: right;
-}
-nav ul li{
-  float: left;
-}
-nav ul li a:link{
-  display: block;
-  margin-right: 25px;
-  padding-bottom: 3px;
-  text-transform: uppercase;
-}
-nav ul li a:hover{
-  border-bottom: 1px solid #aeaeae;
 }
 
 #conteudo{
@@ -185,13 +181,11 @@ aside#news a.button {
   font-weight: bold;
   transition: background 0.3s ease;
 }
-aside#news a.button {
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+
 aside#news a.button:hover {
   background-color: #8b1a1a;
 }
+
 
 .comunidades-container {
   display: grid;
@@ -200,6 +194,12 @@ aside#news a.button:hover {
   padding: 40px;
   background: linear-gradient(to right, #f7f8fc, #eef1f5);
   border-radius: 16px;
+}
+.comunidades-indicadas,
+.comunidades-visitadas {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 .titulo-comunidades {
   font-family: Poppins, sans-serif;
@@ -215,38 +215,45 @@ aside#news a.button:hover {
 
 .comunidades-em-linha {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5em;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  max-width: 100%;
+  transition: transform 0.5s ease;
+  padding-bottom: 1rem;
+
 }
 
 .card-comunidade {
-  background-color: #fff;
-  padding: 16px;
-  width: 220px;
+  flex: 0 0 auto;
+  width: 200px;
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px;
   text-align: center;
-  transition: transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+
 }
 
 .card-comunidade:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
 }
-
 .card-comunidade img {
   width: 100%;
   height: 140px;
   object-fit: cover;
-  border-radius: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-comunidade h5 {
-  margin: 12px 0 8px;
-  font-size: 16px;
-  color: #2c2c2c;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
 }
 
 .btn-entrar {
