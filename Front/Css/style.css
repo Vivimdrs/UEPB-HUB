@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: 'Inter', sans-serif;
@@ -22,6 +23,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 .container{
+  display: flex;
   width: 1080px;
   margin: 40px auto;
   padding: 30px;
@@ -29,7 +31,6 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow-x: hidden;
-  display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -45,36 +46,86 @@ header {
   height: 30px;
 }
 /*login e criar conta*/
-
+.login, .criarconta{
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
 .login{
-  width: 500px;
-  background-color: var(--vermelho-uepb);
-  border-radius: 8px;
-  padding: 20px;
+  width: 480px;
+  background: linear-gradient(135deg, #d11818, #530606);
+  color: white;
 }
 .criarconta{
-  width: 490px;
-  background-color: var(--branco);
-  border-radius: 8px;
-  padding: 20px;
+  width: 480px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
 }
+.titulologin, .titulocriarconta {
+  font-size: 1.75em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .titulologin{
   color: var(--branco);
-  font-size: 1.5em;
-  text-align: center;
 }
 .titulocriarconta{
   color: var(--vermelho-uepb);
-  font-size: 1.5em;
-  text-align: center;
 }
-.form{
+.form-criarconta, .form-login {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin: 20px 0;
 }
+
+.form-criarconta input {
+  padding: 10px;
+  width: 100%;
+  border-bottom: #c50505 2px solid;
+  border-radius: 6px;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease;
+}
+.form-login input {
+  background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  border-bottom: #f7f7f7 2px solid;
+  border-radius: 6px;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease;
+}
+.form-login input::placeholder{
+  color: var(--branco);
+  font-size: 1em;
+}
+.form-criarconta input::placeholder{
+  color: var(--cinza-escuro);
+  font-size: 1em;
+}
+input.botao {
+  background-color: var(--vermelho-uepb);
+  border: none;
+  border-radius: 6px;
+  height: 45px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input.botao:hover {
+  background-color: var(--vermelho-uepb);
+}
+
  /*tela principal*/
 
 #conteudo{
