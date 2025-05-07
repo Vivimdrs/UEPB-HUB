@@ -231,6 +231,7 @@ aside#news {
   padding: 20px;
   margin-top: 20px;
   transition: transform 0.3s ease;
+  align-items: center;
 }
 aside#news:hover {
   transform: translateY(-5px);
@@ -271,9 +272,9 @@ aside#news a.button {
   background-color: var(--vermelho-uepb);
   color: white;
   text-decoration-line: none;
-  display: inline-block;
-  font-size: 0.7em;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
 }
 
 aside#news a.button:hover {
