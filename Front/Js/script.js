@@ -22,4 +22,27 @@ document.addEventListener('DOMContentLoaded', () => {
       botaocor.style.left = '150px'; // ajustado para a largura dos botões
     });
   });
+
+  function matriculaValida(matricula) {
+    const regex = /^\d{9}$/;
+    return regex.test(matricula);
+  }
+  
+  document.getElementById('formLogin').addEventListener('submit', function(e) {
+    e.preventDefault();
+  
+    const matriculaInput = this.querySelector('input[name="matricula"]');
+    const matricula = matriculaInput.value.trim();
+  
+    if (!matriculaValida(matricula)) {
+      alert('Matrícula inválida. Insira exatamente 9 números.');
+      matriculaInput.focus();
+      return;
+    }
+  
+    window.location.href = 'telaprincipal.html';
+  });
+  
+
+  
   
