@@ -1,12 +1,13 @@
 /*Caracteristicas gerais*/
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 body {
-  font-family: 'Inter', sans-serif;
+ 
   color: var(--cinza-escuro);
   line-height: 1.6;
   overflow-x: hidden;
@@ -19,8 +20,6 @@ body {
   --branco: #ffffff;
   --cinza-hover: #aeaeae;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 .container, .container-login {
   display: flex;
@@ -35,9 +34,10 @@ body {
   align-items: flex-start;
 }
 .container-login {
-  align-items: stretch; 
+  position: relative;
   gap: 0px; 
   background-color: whitesmoke;
+  align-items: center;
 }
 header {
   background-color: var(--vermelho-uepb);
@@ -52,6 +52,7 @@ header {
 /*login e criar conta*/
 
 .login, .criarconta{
+  margin-top: 40px;
   border-radius: 15px;
   padding: 30px 25px;
   box-shadow: 4 8px 12px rgba(0,0,0,0.1);
@@ -62,12 +63,12 @@ header {
   min-height: 500px;
 }
 .login{
-  width: 480px;
+  width: 440px;
   background: linear-gradient(135deg, #d11818, #530606);
   color: white;
 }
 .criarconta{
-  width: 480px;
+  width: 440px;
   background-color: white;
   border: 1px solid #e0e0e0;
 }
@@ -170,6 +171,7 @@ input[type="password"]:focus, input[type="text"]:focus {
   outline: none;
   box-shadow: none;
 }
+
 
  /*tela principal*/
 
