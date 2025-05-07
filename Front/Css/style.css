@@ -22,7 +22,7 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-.container{
+.container, .container-login {
   display: flex;
   width: 1080px;
   margin: 40px auto;
@@ -31,10 +31,14 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow-x: hidden;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
 }
-
+.container-login {
+  align-items: stretch; 
+  gap: 0px; 
+  background-color: whitesmoke;
+}
 header {
   background-color: var(--vermelho-uepb);
   padding: 20px 0;
@@ -46,14 +50,16 @@ header {
   height: 30px;
 }
 /*login e criar conta*/
+
 .login, .criarconta{
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 30px 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 4 8px 12px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 16px;
+  min-height: 500px;
 }
 .login{
   width: 480px;
@@ -66,7 +72,7 @@ header {
   border: 1px solid #e0e0e0;
 }
 .titulologin, .titulocriarconta {
-  font-size: 1.75em;
+  font-size: 1.35em;
   font-weight: 600;
   text-align: center;
   margin-bottom: 10px;
@@ -77,6 +83,16 @@ header {
 }
 .titulocriarconta{
   color: var(--vermelho-uepb);
+}
+.login p{
+  font-size: 0.9em;
+  text-align: center;
+  color: var(--branco);
+}
+.criarconta p{
+  font-size: 0.9em;
+  text-align: center;
+  color: var(--cinza-escuro);
 }
 .form-criarconta, .form-login {
   display: flex;
@@ -110,20 +126,49 @@ header {
   color: var(--cinza-escuro);
   font-size: 1em;
 }
-input.botao {
-  background-color: var(--vermelho-uepb);
+.form-login a{
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+}
+.form-login a:hover{ 
+  text-decoration: underline;
+}
+.btn-login, .btn-criarconta  {
+  margin: 0 auto;
   border: none;
   border-radius: 6px;
-  height: 45px;
-  color: white;
+  width: 200px;
+  height: 30px;
   font-weight: bold;
   font-size: 1em;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
-
-input.botao:hover {
+.btn-criarconta{
   background-color: var(--vermelho-uepb);
+  color: var(--branco);
+  border: none;
+}
+.btn-entrar{
+  background-color: var(--branco);
+  color: var(--vermelho-uepb);
+  border: none;
+}
+.btn-login:hover{
+  background-color: transparent;
+  color: var(--branco);
+  border: #530606 1px solid;
+}
+.btn-criarconta:hover{
+  background-color: #fff;
+  color: var(--vermelho-uepb);
+  border: none;
+}
+input[type="email"]:focus,
+input[type="password"]:focus, input[type="text"]:focus {
+  outline: none;
+  box-shadow: none;
 }
 
  /*tela principal*/
@@ -170,6 +215,8 @@ article#campi{
 /*area lateral na tela principal*/
 
 aside{
+  margin-left: 30px;
+  background-color: white;
   width: 200px;
   padding-bottom: 30px;
   margin-bottom: 20px;
@@ -217,20 +264,20 @@ aside#news h4 {
 }
 
 aside#news a.button {
-  display: block;
-  margin-top: 15px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 6px 12px;
   background-color: var(--vermelho-uepb);
   color: white;
-  text-align: center;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  text-decoration-line: none;
+  display: inline-block;
+  font-size: 0.7em;
+  align-items: center;
 }
 
 aside#news a.button:hover {
-  background-color: #8b1a1a;
+  background-color: #ffffff;
+  color: var(--vermelho-uepb);
+  border-bottom: var(--vermelho-uepb) 1px solid;
 }
 
 /*comunidades*/
