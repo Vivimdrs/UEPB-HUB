@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="Css/style.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Criar Conta</title>
+  <link rel="stylesheet" href="Css/style.css" />
 </head>
-<body>
-    <div class="container-login">
-        <div class="login">
-            <h2 class="titulologin">Estamos felizes em te ver de novo!</h2>
-            <p class="descrição">Entre com seu e-mail e senha para continuar</p>
-            <form class="form-login">
-                <input type="email" placeholder="E-mail" required>
-                <input type="password" placeholder="Senha" required>
-                <a href="">Esqueceu sua senha?</a>
-                <button class="btn-login">Entrar</button>
-            </form>
-        </div>
-        <div class="criarconta">
-            <h2 class="titulocriarconta">Novo por aqui? Cadastre-se agora.</h2>
-            <p class="descrição">Estamos prontos para te receber.</p>
-            <form class="form-criarconta">
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Sobrenome" required>
-                <input type="email" placeholder="E-mail"required>
-                <input type="password" placeholder="Crie uma senha" required>
-                <button class="btn-criarconta">Criar conta</button>
-            </form>
-        </div>  
-    </div>   
+<body class="bodylogin">
+  <div class="container-login">
+    <div class="botoessuperiores">
+      <div class="botaocor" id="botaocor"></div>
+      <button id="btnLogin">Login</button>
+      <button id="btnCriar">Criar Conta</button>
+    </div>
+
+    <form id="formLogin" class="form active">
+    <h2 class="titulologin">Estamos felizes em te ver de novo!</h2>
+    <input type="email" placeholder="Digite seu e-mail" required />
+    <input type="password" placeholder="Senha" required />
+    <button type="submit">Entrar</button>
+    </form>
+
+
+    <form id="formCriar" class="form">
+    <h2 class="titulocriarconta">Novo por aqui? Cadastre-se agora.</h2>
+    <p class="descrição">Estamos prontos para te receber.</p>
+    <input type="text" placeholder="Nome" required />
+    <input type="email" placeholder="E-mail" required />
+    <input type="password" placeholder="Senha" required />
+    <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+
+  <script src="Js/script.js"></script>
 </body>
 </html>

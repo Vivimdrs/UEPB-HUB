@@ -1,15 +1,25 @@
-let formLogin = document.getElementById("formLogin");
-let formCriar = document.getElementById("formCriar");
-let btn = document.getElementById("btn");
-
-function criarConta() {
-  formLogin.style.left = "-450px";
-  formCriar.style.left = "25px";
-  btn.style.left = "108px";
-}
-
-function login() {
-  formLogin.style.left = "25px";
-  formCriar.style.left = "450px";
-  btn.style.left = "0";
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const btnLogin = document.getElementById('btnLogin');
+    const btnCriar = document.getElementById('btnCriar');
+    const formLogin = document.getElementById('formLogin');
+    const formCriar = document.getElementById('formCriar');
+    const botaocor = document.getElementById('botaocor');
+  
+    // Estado inicial: mostrar login
+    formLogin.classList.add('active');
+    formCriar.classList.remove('active');
+    botaocor.style.left = '0px';
+  
+    btnLogin.addEventListener('click', () => {
+      formLogin.classList.add('active');
+      formCriar.classList.remove('active');
+      botaocor.style.left = '0px';
+    });
+  
+    btnCriar.addEventListener('click', () => {
+      formCriar.classList.add('active');
+      formLogin.classList.remove('active');
+      botaocor.style.left = '150px'; // ajustado para a largura dos botões
+    });
+  });
+  

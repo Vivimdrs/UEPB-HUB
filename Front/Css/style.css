@@ -7,11 +7,9 @@
   font-family: 'Inter', sans-serif;
 }
 body {
- 
   color: var(--cinza-escuro);
   line-height: 1.6;
-  overflow-x: hidden;
-  
+  overflow-x: hidden; 
 }
 :root {
   --vermelho-uepb: #a42929;
@@ -21,23 +19,17 @@ body {
   --cinza-hover: #aeaeae;
 }
 
-.container, .container-login {
+.container {
   display: flex;
   width: 1080px;
   margin: 40px auto;
   padding: 30px;
   background-color: var(--cinza-claro);
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #f7f8fc, #cdcdce);
   overflow-x: hidden;
   justify-content: center;
   align-items: flex-start;
-}
-.container-login {
-  position: relative;
-  gap: 0px; 
-  background-color: whitesmoke;
-  align-items: center;
 }
 header {
   background-color: var(--vermelho-uepb);
@@ -49,130 +41,116 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   height: 30px;
 }
-/*login e criar conta*/
 
-.login, .criarconta{
-  margin-top: 40px;
-  border-radius: 15px;
-  padding: 30px 25px;
-  box-shadow: 4 8px 12px rgba(0,0,0,0.1);
+/*login*/
+
+body.bodylogin {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: var(--cinza);
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-login {
+  width: 600px;
+  height: 450px;
+  background: var(--branco);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+  position: relative;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+.botoessuperiores {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 300px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.botaocor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 40px;
+  background: linear-gradient(to right,#d11818, #530606);
+  border-radius: 30px;
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.botoessuperiores button {
+  width: 140px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  font-size: 14px;
+}
+form.form {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 20px;
+  display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-  min-height: 500px;
+  gap: 15px;
 }
-.login{
-  width: 440px;
-  background: linear-gradient(135deg, #d11818, #530606);
+
+form.form.active {
+  display: flex;
+}
+
+form input {
+  background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  border-bottom:var(--vermelho-uepb) 1px solid;
+  border-radius: 6px;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease;
+}
+
+form button[type="submit"] {
+  padding: 10px;
+  background: var(--roxo);
   color: white;
-}
-.criarconta{
-  width: 440px;
-  background-color: white;
-  border: 1px solid #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
 }
 .titulologin, .titulocriarconta {
-  font-size: 1.35em;
+  font-size: 1.15em;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 10px;
 }
-
-.titulologin{
-  color: var(--branco);
-}
-.titulocriarconta{
-  color: var(--vermelho-uepb);
-}
-.login p{
-  font-size: 0.9em;
-  text-align: center;
-  color: var(--branco);
-}
-.criarconta p{
+.descrição{
   font-size: 0.9em;
   text-align: center;
   color: var(--cinza-escuro);
-}
-.form-criarconta, .form-login {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 20px 0;
-}
-
-.form-criarconta input {
-  padding: 10px;
-  width: 100%;
-  border-bottom: #c50505 2px solid;
-  border-radius: 6px;
-  font-size: 0.95em;
-  transition: border-color 0.3s ease;
-}
-.form-login input {
-  background-color: transparent;
-  padding: 10px;
-  width: 100%;
-  border-bottom: #f7f7f7 2px solid;
-  border-radius: 6px;
-  font-size: 0.95em;
-  transition: border-color 0.3s ease;
-}
-.form-login input::placeholder{
-  color: var(--branco);
-  font-size: 1em;
-}
-.form-criarconta input::placeholder{
-  color: var(--cinza-escuro);
-  font-size: 1em;
-}
-.form-login a{
-  color: var(--branco);
-  text-decoration: none;
-  font-size: 0.9em;
-  text-align: center;
-}
-.form-login a:hover{ 
-  text-decoration: underline;
-}
-.btn-login, .btn-criarconta  {
-  margin: 0 auto;
-  border: none;
-  border-radius: 6px;
-  width: 200px;
-  height: 30px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-}
-.btn-criarconta{
-  background-color: var(--vermelho-uepb);
-  color: var(--branco);
-  border: none;
-}
-.btn-entrar{
-  background-color: var(--branco);
-  color: var(--vermelho-uepb);
-  border: none;
-}
-.btn-login:hover{
-  background-color: transparent;
-  color: var(--branco);
-  border: #530606 1px solid;
-}
-.btn-criarconta:hover{
-  background-color: #fff;
-  color: var(--vermelho-uepb);
-  border: none;
-}
-input[type="email"]:focus,
-input[type="password"]:focus, input[type="text"]:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-
+} 
  /*tela principal*/
 
 #conteudo{
@@ -274,7 +252,7 @@ aside#news a.button {
   text-decoration-line: none;
   display: flex;
   justify-content: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 aside#news a.button:hover {
@@ -286,11 +264,11 @@ aside#news a.button:hover {
 /*comunidades*/
 
 .comunidades-container {
+  background: linear-gradient(to bottom, #f7f8fc, #cdcdce);
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 40px;
-  background: linear-gradient(to right, #f7f8fc, #eef1f5);
+  padding: 30px;
   border-radius: 16px;
 }
 .comunidades-indicadas,
