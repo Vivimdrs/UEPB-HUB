@@ -7,7 +7,7 @@
   font-family: 'Inter', sans-serif;
 }
 body {
-  color: var(--cinza-escuro);
+  background: url(../img/fundo-login.jpg) no-repeat center fixed;
   line-height: 1.6;
   overflow-x: hidden; 
 }
@@ -26,7 +26,6 @@ body {
   padding: 30px;
   background-color: var(--cinza-claro);
   border-radius: 16px;
-  background: linear-gradient(to bottom, #f7f8fc, #cdcdce);
   overflow-x: hidden;
   justify-content: center;
   align-items: flex-start;
@@ -45,7 +44,7 @@ header {
 /*login*/
 
 body.bodylogin {
-  background: url(../img/fundo-login.jpg) no-repeat center center fixed;
+  background: url(../img/fundo-login.jpg) no-repeat center fixed;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -134,7 +133,8 @@ form.form.active {
   color: var(--cinza-escuro);
   font-size: 1em;
 }
-form button[type="submit"]{
+form button[type="submit"]
+{
   margin: 0 auto;
   border: none;
   border-radius: 6px;
@@ -178,7 +178,6 @@ input[type="email"]:focus,
  /*tela principal*/
 
 #conteudo{
-  background-color: #ffffff;
   width: 810px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -288,7 +287,7 @@ aside#news a.button:hover {
 /*comunidades*/
 
 .comunidades-container {
-  background: linear-gradient(to bottom, #f7f8fc, #cdcdce);
+  background: url(../img/fundo-login.jpg) no-repeat center fixed;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -313,6 +312,7 @@ aside#news a.button:hover {
 }
 
 .comunidades-em-linha {
+  background: var(--cinza-claro);
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
