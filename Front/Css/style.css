@@ -18,7 +18,32 @@ body {
   --branco: #ffffff;
   --cinza-hover: #aeaeae;
 }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--vermelho-uepb);
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+.icon-bar {
+  display: flex;
+  gap: 18px; 
+  padding: 10px;
+  color: #fff;
+}
+.icon-bar input[type="text"] {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  width: 200px;
+}
 .container {
   display: flex;
   width: 1180px;
@@ -29,16 +54,6 @@ body {
   overflow-x: hidden;
   justify-content: center;
   align-items: flex-start;
-}
-header {
-  background-color: var(--vermelho-uepb);
-  padding: 20px 0;
-  text-align: center;
-  color: var(--branco);
-  font-size: 20px;
-  font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  height: 30px;
 }
 
 /*login*/
@@ -234,7 +249,7 @@ aside{
   height: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  margin-top: px;
+  margin-top: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
