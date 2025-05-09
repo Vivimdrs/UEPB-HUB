@@ -23,11 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  function matriculaValida(matricula) {
-    const regex = /^\d{9}$/;
-    return regex.test(matricula);
-  }
   
+function scrollCarousel(button, distance) {
+  const wrapper = button.parentElement;
+  const container = wrapper.querySelector('.comunidades-em-linha');
 
-  
+  if (container) {
+    container.scrollBy({
+      left: distance,
+      behavior: 'smooth'
+    });
+  }
+}
+
+
   

@@ -6,74 +6,101 @@
     <title>Uepb HUB</title>
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
 	<script src= "Js/script.js"></script>
     
 </head>
 <body>
+    <header>
+     <span>Uepb Hub</span>
+
+      <div class="icon-bar">
+          <i class="material-icons">search</i>
+          <i class="material-icons">notifications</i>
+          <i class="material-icons">account_circle</i>
+      </div>
+    </header>
     <main class="comunidades-container"> 
+
         <div class="comunidades-indicadas">
-          <h2 class="titulo-comunidades">Comunidades que você visitou</h2>                
-            <div class="comunidades-em-linha">       
-              <div class="card-comunidade">
-                <img src="img/Game_of_thrones.jpg" alt="got">
-                <h5>Game of thrones</h5>
-                <a href="gameoftrhounes.html">
-                  <button class="btn-entrar">Entrar</button>
-                </a>
-              </div>
-              <div class="card-comunidade">
-                <img src="img/bk.jpg" alt="Breaking Bad">
-                <h5>Breaking Bad</h5>
-                <button class="btn-entrar">Entrar</button>
-              </div>
-              <div class="card-comunidade">
-                <img src="img/the-big-bang-theory.avif" alt="Big Bang Theory">
-                <h5>Big Bang Theory</h5>
-                <button class="btn-entrar">Entrar</button>
-              </div>
-              <div class="card-comunidade">
-                <img src="img/hp.jpeg" alt="Harry Potter">
-                <h5>Harry Potter</h5>
-                <button class="btn-entrar">Entrar</button>
-              </div>
-              <div class="card-comunidade">
-                <img src="img/senhordosaneis.jpeg" alt="senhordosaneis">
-                <h5>Senhor dos aneis</h5>
-                <button class="btn-entrar">Entrar</button>
-              </div>               
-            </div>
-        </div>
-        <div class="comunidades-visitadas">
-          <h2 class="titulo-comunidades">Principais comunidades do Campus VII</h2>          
-          <div class="comunidades-em-linha">
-              <div class="card-comunidade">
-                <img src="img/stranger.jpeg" alt="Stranger Things">
-                <h5>Stranger Things</h5>
-                <button class="btn-entrar">Entrar</button>              
-              </div>
-              <div class="card-comunidade">
-                <img src="img/dark.jpg" alt="dark">
-                <h5>Dark</h5>
-                <button class="btn-entrar">Entrar</button>
-               </div>
-               <div class="card-comunidade">
-                 <img src="img/disney-plus-logo.jpg" alt="Disney Plus">
-                 <h5>Mundo Disney</h5>
-                 <button class="btn-entrar">Entrar</button>
+
+          <h2 class="titulo-comunidades">Comunidades que você visitou</h2>   
+            <div class="carrosel">
+
+              <button class="nav left" onclick="scrollCarousel(this, -300)">&#10094;</button>
+              <div class="comunidades-em-linha" id="comunidades-em-linha">  
+                
+                <div class="card-comunidade">
+                  <img src="img/Game_of_thrones.jpg" alt="got">
+                  <h5>Game of thrones</h5>
+                  <a href="gameoftrhounes.html"></a>
+                </div>
+
+                <div class="card-comunidade">
+                  <img src="img/bk.jpg" alt="Breaking Bad">
+                  <h5>Breaking Bad</h5>
+                  
                 </div>
                 <div class="card-comunidade">
-                  <img src="img/vikings.jpeg" alt="Comunidade 2">
-                  <h5>Vikings</h5>
-                  <button class="btn-entrar">Entrar</button>
+                  <img src="img/the-big-bang-theory.avif" alt="Big Bang Theory">
+                  <h5>Big Bang Theory</h5>
                 </div>
+
+                <div class="card-comunidade">
+                  <img src="img/hp.jpeg" alt="Harry Potter">
+                  <h5>Harry Potter</h5>
+                </div>
+
+                <div class="card-comunidade">
+                  <img src="img/senhordosaneis.jpeg" alt="senhordosaneis">
+                  <h5>Senhor dos aneis</h5>  
+                </div>  
+
+              </div>
+              <button class="nav right" onclick="scrollCarousel(this, 300)">&#10095;</button>  
+            </div>     
+            
+        </div>
+        <div class="comunidades-visitadas">
+
+          <h2 class="titulo-comunidades">Principais comunidades do Campus VII</h2>  
+          
+          <div class="carrosel">
+
+            <button class="nav left" onclick="scrollCarousel(this, -300)">&#10094;</button>
+            <div class="comunidades-em-linha">
+
+              <div class="card-comunidade">
+                <img src="img/stranger.jpeg" alt="Stranger Things">
+                <h5>Stranger Things</h5>                              
+              </div>
+
+              <div class="card-comunidade">
+                <img src="img/dark.jpg" alt="dark">
+                <h5>Dark</h5>                
+               </div>
+
+               <div class="card-comunidade">
+                 <img src="img/disney-plus-logo.jpg" alt="Disney Plus">
+                 <h5>Mundo Disney</h5>                
+                </div>
+
+                <div class="card-comunidade">
+                  <img src="img/vikings.jpeg" alt="Comunidade 2">
+                  <h5>Vikings</h5>                
+                </div>
+
                 <div class="card-comunidade">
                   <img src="img/supernatural.jpeg" alt="supernatural">
                   <h5>Supernatural</h5>
-                  <button class="btn-entrar">Entrar</button>
                 </div>
-                </div>
-            </div>      
+
+              </div>
+              <button class="nav right" onclick="scrollCarousel(this, 300)">&#10095;</button>
+            </div>
+          </div>
+                
         </div>
       </main>
 
