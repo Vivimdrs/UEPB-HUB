@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formCriar = document.getElementById('formCriar');
     const botaocor = document.getElementById('botaocor');
   
-    // Estado inicial: mostrar login
+    
     formLogin.classList.add('active');
     formCriar.classList.remove('active');
     botaocor.style.left = '0px';
@@ -35,6 +35,7 @@ function scrollCarousel(button, distance) {
     });
   }
 }
+
 
 
   
