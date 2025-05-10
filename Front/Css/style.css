@@ -7,7 +7,7 @@
   font-family: 'Inter', sans-serif;
 }
 body {
-  background: url(../img/fundo-login.jpg) no-repeat center fixed;
+  background: url(../img/fundo-login.jpg);
   line-height: 1.6;
   overflow-x: hidden; 
 }
@@ -58,7 +58,7 @@ header {
   width: 1180px;
   margin: 40px auto;
   padding: 30px;
-  background-color: var(--cinza-claro);
+  background-color: var(--branco);
   border-radius: 16px;
   overflow-x: hidden;
   justify-content: center;
@@ -245,7 +245,13 @@ article#campi{
 .campus img:hover {
   transform: scale(1.05);
 }
-
+#bemvindos {
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.6);
+  color: var(--cinza-escuro);
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 10px;
+}
 .campus p {
   margin-top: 8px;
   font-size: 16px;
@@ -338,36 +344,26 @@ aside#news > div:not(:last-child) {
 /*comunidades*/
 
 .comunidades-container {
-  background-color: var(--cinza-claro);
+  background-color: var(--branco);
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 30px;
   border-radius: 16px;
 }
-.comunidades-indicadas,
-.comunidades-visitadas {
+.comunidades {
   width: 100%;
   overflow-x: hidden;
   position: relative;
 }
-.titulo-comunidades, #bemvindos {
-  color: var(--cinza-escuro);
-  padding: 20px;
+.titulo-comunidades {
   font-size: 17px;
-
-  
+  color: var(--cinza-escuro);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.comunidades-em-linha {
-  background: url(../img/fundo-login.jpg) no-repeat center top;
-  display: flex;
-  gap: 1.5em;
-  padding: 10px 0 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-
-}
 .carrossel {
   position: relative;
   overflow: hidden;
@@ -375,6 +371,7 @@ aside#news > div:not(:last-child) {
 }
 
 .comunidades-em-linha {
+  background: url(../img/fundo-login.jpg) no-repeat center;
   display: flex;
   overflow-x: auto;
   scrollbar-width: none; 
@@ -382,14 +379,14 @@ aside#news > div:not(:last-child) {
   scroll-behavior: smooth;
   gap: 1.5em;
   padding: 20px 0;
+  border-radius: 8px;
 }
 
 .card-comunidade {
   flex: 0 0 auto;
-  width: 280px;
+  width: 240px;
   border-radius: 10px;
   background-color: white;
-  padding: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   text-align: center;
 }
@@ -419,7 +416,7 @@ aside#news > div:not(:last-child) {
 }
 .card-comunidade img {
   width: 100%;
-  height: 140px;
+  height: 130px;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
