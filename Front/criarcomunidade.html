@@ -29,7 +29,11 @@
         <main>
             <h1>Criar Comunidade</h1>
             <section>
-                <input type="image">
+                <label class="upload-label">
+                    <img src="img/adicionar_imagem.png" alt="Selecionar imagem">
+                    <input type="file" name="image" accept="image/*" class="imagemcomunidade">
+                </label>
+                <!-- <button type="submit">Enviar</button> -->
                 <input type="text" placeholder="Nome da comunidade">
                 <select id="genero" name="genero[]" multiple>
                     <option value="ESTUDOS">Estudos</option>
@@ -37,6 +41,7 @@
                     <option value="FANTASIA">Fantasia</option>
                     <option value="ROCK">Rock</option>
                 </select>
+                <input type="text" placeholder="Descrição">
             </section>
         </main>
     </div>
