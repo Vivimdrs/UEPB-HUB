@@ -1,0 +1,127 @@
+/*tela principal*/
+
+#conteudo{
+  width: 810px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+article#campi{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 24px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.campus {
+  text-align: center;
+}
+
+.campus img {
+  width: 330px;
+  height: 170px;
+  object-fit: cover; 
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.campus img:hover {
+  transform: scale(1.05);
+}
+#bemvindos {
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.6);
+  color: var(--cinza-escuro);
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 10px;
+}
+.campus p {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+/*area lateral na tela principal*/
+
+aside{
+  margin-left: 30px;
+  background-color: #ffffff;
+  width: 240px;
+  height: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+aside#news:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+aside#news h3 {
+  font-size: 20px;
+  color: var(--vermelho-uepb);
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--vermelho-uepb);
+}
+aside#news img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+aside#news img:hover {
+  transform: scale(1.03);
+}
+aside#news h4 {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+#news .noticia {
+  background-color: var(--cinza-claro);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.noticia a.button {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  background-color: var(--vermelho-uepb);
+  color: white;
+  font-weight: 500;
+  font-size: 0.85em;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+aside#news a.button:hover {
+  background-color: #ffffff;
+  color: var(--vermelho-uepb);
+  border-bottom: var(--vermelho-uepb) 1px solid;
+}
+aside#news > div:not(:last-child) {
+  margin-bottom: 20px; /* separa cada “notícia” */
+}
