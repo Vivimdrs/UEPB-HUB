@@ -8,9 +8,39 @@
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/normalizer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- to colocando os comentários só pra eu lembrar o que é tanto :D -->
-    <!-- lembrar de ter titulo, conteudo (texto) e imagem -->
+    <header>
+        <div>
+        <span>UEPB HUB</span>
+        </div>
+
+        <div class="icon-bar">
+        <button id="sininho">
+            <i class="material-icons">notifications</i>
+        </button>
+        <i class="material-icons">account_circle</i>
+        </div>
+    </header>
+    <div class="container-criar-postagem">
+        <div class="container-titulo-botao">
+            <h1>Criar Postagem</h1>
+            <button type="submit" class="botaoenviar">Postar</button>
+        </div>
+        <div class="asides-container">
+            <aside class="imagem">
+                <label class="upload-label">
+                    <img src="img/adicionar_imagem.png" alt="Selecionar imagem">
+                    <input type="file" name="image" accept="image/*" class="imagempostagem">
+                </label>
+            </aside>
+            <aside class="textos">
+                <input type="text" placeholder="Título" class="titulopostagem" maxlength="50">
+                <hr>
+                <textarea placeholder="Descrição (máximo de 500 caracteres)" class="conteudo" maxlength="500"></textarea>
+            </aside>
+        </div>
+    </div>
 </body>
 </html>
