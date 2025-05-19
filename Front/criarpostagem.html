@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="Css/normalizer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
+    <script src="js/informacoesuser.js"></script>
 </head>
 <body>
     <header>
@@ -34,6 +36,13 @@
                     <img src="img/adicionar_imagem.png" alt="Selecionar imagem">
                     <input type="file" name="image" accept="image/*" class="imagempostagem">
                 </label>
+                <div class="informacoesuser"> <!-- tem que colocar id pra pegar la no js -->
+                    <img class="iconuser" alt="Icon de usuario" src="" id="iconuser">
+                    <div class="detalhes">
+                        <span class="username" id="username"></span>
+                        <span class="campus" id="campus"></span>
+                    </div>
+                </div>
             </aside>
             <aside class="textos">
                 <input type="text" placeholder="Título" class="titulopostagem" maxlength="50">

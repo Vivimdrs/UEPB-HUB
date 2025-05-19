@@ -1,5 +1,5 @@
 .container-criar-postagem{
-    font-family: 'Dancing Script', cursive;
+    /*font-family: 'Dancing Script', cursive;*/
     width: 80%;
     height: 600px;
     margin: 40px auto;
@@ -117,4 +117,28 @@ input::placeholder, textarea::placeholder {
 .upload-label img:hover{
     transform: scale(1.1);
     /*box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);*/
+}
+
+.informacoesuser{
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.iconuser{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.detalhes{
+    display: flex;
+    flex-direction: column;
+}
+
+.username{
+    margin-top: 4px;
 }
