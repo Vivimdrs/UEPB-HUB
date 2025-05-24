@@ -1,0 +1,248 @@
+.containerpost{
+    width: 80%;
+    height: auto;
+    margin: 40px auto;
+    background-color: #a42929;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 13px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.informacoes-autor{
+    flex: 0 0 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.informacoes-post{
+    flex: 0 0 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/*icone user*/
+.iconuserautor{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.4);
+}
+
+.iconuserautor:hover{
+    transform: scale(1.1);
+}
+
+ /*informações autor post*/
+.informacoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.detalhes{
+    display: flex;
+    flex-direction: column;
+}
+
+.usernameautor{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.campusautor{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/*botão de like*/
+.botaolike{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 30px;
+    height: 25px;
+    gap: 6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.botaolike img{
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.botaolike.active img{
+    transform: scale(1.1);
+}
+
+.likes{
+    margin: 0;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.botao-e-like{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+/*sessão de comentários*/
+.comenticon{
+    width: 25px;
+    height: 25px;
+    gap: 6px;
+}
+
+.comenticon-e-coment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.listacomentarios{
+    font-size: 18px;
+    color: white;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.comentarioslista{
+    width: 100%;
+    overflow-y: auto;
+    max-height: 200px;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.iconusercoment{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.usernamecoment{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.comentinfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+.comentarios{
+    margin-left: 35px;
+    color: white;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/*postagem em si*/
+.titulopostagem{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+.hrstyle{
+    all: unset;
+    display: block;
+    width: 600px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ffffff 40%, #ffffff 60%, transparent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+.capapostagem{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: normal;
+}
+
+.conteudopostagem{
+    color: white;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+/*fazer comentario*/
+.iconuser{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.fazercomentario{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+textarea{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px 5px;
+    resize: none;
+    overflow: hidden;
+}
+
+.botaoenviarcoment{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    gap: 6px;
+}
+
+.botaoenviarcoment img{
+    width: 30px;
+    height: 30px;
+}

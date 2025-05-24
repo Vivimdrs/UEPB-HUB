@@ -3,13 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postagem</title>
+    <title>Post</title>
     <link rel="stylesheet" href="Css/stylespost.css">
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/normalizer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="Js/botaolike.js"></script>
+    <script src="Js/scrollcomentarios.js"></script>
+    <script src="Js/enviarcomentario.js"></script>
+    <script src="Js/receberinfonovocoment.js"></script>
 </head>
 <body>
-    <!-- curtidas, comentarios, etc -->
+    <header>
+        <div>
+        <span>UEPB HUB</span>
+        </div>
+
+        <div class="icon-bar">
+        <button id="sininho">
+            <i class="material-icons">notifications</i>
+        </button>
+        <i class="material-icons">account_circle</i>
+        </div>
+    </header>
+    <div class="containerpost">
+        <aside class="informacoes-autor">
+            <div class="informacoes">
+                <img class="iconuserautor" alt="Icon de usuario" src="" id="iconuserautor">
+                <div class="detalhes">
+                    <span class="usernameautor" id="username"></span>
+                    <span class="campusautor" id="campus"></span>
+                    <div class="botao-e-like">
+                        <button class="botaolike" id="botaolike">
+                            <img src="img/likevazio.png" alt="Botão de like" class="likeicon" id="likeicon">
+                        </button>
+                        <span class="likes" id="likes"></span>
+                    </div>
+                    <div class="comenticon-e-coment">
+                        <img src="img/comentarios (1).png" class="comenticon" alt="Icon de comentários">
+                        <p class="listacomentarios"></p>
+                    </div>
+                    <div class="comentarioslista">
+                        <div class="comentinfo">
+                            <img class="iconusercoment" alt="Icon de usuario" src="" id="iconusercoment">
+                            <span class="usernamecoment" id="usernamecoment"></span>
+                        </div>
+                        <p class="comentarios" id="comentarios"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="fazercomentario">
+                <img class="iconuser" alt="Icon de usuario" src="" id="iconuser">
+                <textarea type="text" placeholder="Digite algo..." id="novocomentario"></textarea>
+                <button class="botaoenviarcoment" id="botaoenviarcoment">
+                    <img src="img/seta-direita.png" class="enviarcoment">
+                </button>
+            </div>
+        </aside>
+        <aside class="informacoes-post">
+            <h1 class="titulopostagem" id="titulopostagem"></h1>
+            <hr class="hrstyle">
+            <img class="capapostagem" alt="Imagem do post" src="" id="capapostagem">
+            <div class="conteudopostagem" id="conteudopostagem"></div>
+        </aside>
+    </div>
 </body>
 </html>
