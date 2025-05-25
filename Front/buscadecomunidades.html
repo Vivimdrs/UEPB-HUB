@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Pesquisa</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/stylepesquisa.css">
+    <link rel="stylesheet" href="Css/normalizer.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
+    <script src="Js/pesquisar.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+        <span>UEPB HUB</span>
+        </div>
+
+        <div class="barrapesquisa">
+        <input class="pesquisar" type="text" placeholder="Pesquisar..." onkeyup="pesquisarPosts()">
+        <button onclick="pesquisarPosts()" class="botaolupa"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+        </div>
+        <div class="icon-bar">
+        <button id="sininho">
+            <i class="material-icons">notifications</i>
+        </button>
+        <i class="material-icons">account_circle</i>
+        </div>
+    </header>
+    <div class="containercomunidade">
+        <aside class="capacomunidade">
+            <img class="fotocomunidade" src="img/senhordosaneis.jpeg" id="fotocomunidade">
+        </aside>
+        <aside class="informacoescomunidade">
+            <h1 class="nomecomunidade" id="nomecomunidade">senhor dos aneis</h1>
+            <div class="tags">
+                <div class="tag1" id="tag1">livro</div>
+                <div class="tag2" id="tag2">serie</div>
+                <div class="tag3" id="tag3">fantasia</div>
+            </div>
+            <div class="infoquantidades">
+                <div class="divqntd">
+                    <span class="quantidade" id="qntmembros">123</span>
+                    <p class="p">membros</p>
+                </div>
+                <div class="hv"></div>
+                <div class="divqntd">
+                    <span class="quantidade" id="qntposts">123</span>
+                    <p class="p">posts</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

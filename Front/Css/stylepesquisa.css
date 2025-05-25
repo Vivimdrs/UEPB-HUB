@@ -1,0 +1,92 @@
+.containercomunidade{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    gap: 5px;
+}
+
+.fotocomunidade{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.informacoescomunidade{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.nomecomunidade{
+    margin: 0;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tag1, .tag2, .tag3{
+    display: flex;
+    background-color: #a42929;
+    border-radius: 50px;
+    color: #ffffff;
+    height: 35px;
+    width: 140px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.infoquantidades{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.divqntd{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 50%;
+    gap: 2px;
+}
+
+.quantidade{
+    margin: 0px;
+    color: #000000;
+}
+
+.p{
+    margin: 0px;
+    color: #000000;
+}
+
+.hv{
+    align-self: center;
+    width: 2px;
+    height: 60px;
+    background-color: #000000;
+    margin: 0;
+    border-radius: 50px;
+}

@@ -29,6 +29,38 @@ header {
   z-index: 1000;
 }
 
+.barrapesquisa{
+  display: flex;
+  margin: auto;
+  gap: 5px;
+}
+
+.pesquisar{
+  width: 300px;
+  padding: 10px;
+  height: 25px;
+  border-radius: 20px;
+  border: none;
+}
+
+.botaolupa{
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.botaolupa:hover{
+  transform: scale(1.06);
+}
+
+.lupa{
+  width: 25px;
+  height: 25px;
+}
+
 .icon-bar  {
   display: flex;
   gap: 18px; 

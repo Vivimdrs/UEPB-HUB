@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/normalizer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
     <script src="Js/apiseguir.js"></script>
     <script src="Js/seguircomunidade.js"></script>
     <script src="Js/token.js"></script>
@@ -19,6 +20,10 @@
         <span>UEPB HUB</span>
         </div>
 
+        <div class="barrapesquisa">
+            <input class="pesquisar" type="text" placeholder="Pesquisar..." onkeyup="pesquisarPosts()">
+            <button onclick="pesquisarPosts()" class="botaolupa"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+        </div>
         <div class="icon-bar">
         <button id="sininho">
             <i class="material-icons">notifications</i>
