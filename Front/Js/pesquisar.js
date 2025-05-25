@@ -11,8 +11,9 @@ document.addEventListener('DOMContentLoaded', async () =>{
             container.innerHTML = `
                 <p class="sem-resultados">Nenhuma comunidade encontrada para "<strong>${termo}</strong>".</p>
             `;
-        }else{
+        }else{ //esse "comunidade.id" no klink é pra levar pra comunidade que ta aparecendo
             container.innerHTML = comunidades.map(comunidade => `
+                <a href="comunidade.html?id=${comunidade.id}" class="link-comunidade"> 
                 <div class="containercomunidade" id="resultados-pesquisa">
                     <aside class="capacomunidade">
                         <img class="fotocomunidade" src="${comunidade.capa}" id="${comunidade.nome}">

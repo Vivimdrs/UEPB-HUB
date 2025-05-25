@@ -269,3 +269,25 @@
     object-fit: cover;
     object-position: center;
 }
+
+.botaocriarpost{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #a42929;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.botaocriarpost:hover{
+    transform: scale(1.1);
+}

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
-    <script src="js/informacoesuser.js"></script>
+    
 </head>
 <body>
     <header>
@@ -25,31 +25,35 @@
         <i class="material-icons">account_circle</i>
         </div>
     </header>
-    <div class="container-criar-postagem">
-        <div class="container-titulo-botao">
-            <h1>Criar Postagem</h1>
-            <button type="submit" class="botaoenviar">Postar</button>
-        </div>
-        <div class="asides-container">
-            <aside class="imagem">
-                <label class="upload-label">
-                    <img src="img/adicionar_imagem.png" alt="Selecionar imagem">
-                    <input type="file" name="image" accept="image/*" class="imagempostagem">
-                </label>
-                <div class="informacoesuser"> <!-- tem que colocar id pra pegar la no js -->
-                    <img class="iconuser" alt="Icon de usuario" src="" id="iconuser">
-                    <div class="detalhes">
-                        <span class="username" id="username"></span>
-                        <span class="campus" id="campus"></span>
+    <form id="formcriarpost">
+        <div class="container-criar-postagem">
+            <div class="container-titulo-botao">
+                <h1>Criar Postagem</h1>
+                <button type="submit" class="botaoenviar">Postar</button>
+            </div>
+            <div class="asides-container">
+                <aside class="imagem">
+                    <label class="upload-label">
+                        <img src="img/adicionar_imagem.png" alt="Selecionar imagem">
+                        <input type="file" name="image" accept="image/*" class="imagempostagem" required>
+                    </label>
+                    <div class="informacoesuser"> <!-- tem que colocar id pra pegar la no js -->
+                        <img class="iconuser" alt="Icon de usuario" src="" id="iconuser">
+                        <div class="detalhes">
+                            <span class="username" id="username"></span>
+                            <span class="campus" id="campus"></span>
+                        </div>
                     </div>
-                </div>
-            </aside>
-            <aside class="textos">
-                <input type="text" placeholder="Título" class="titulopostagem" maxlength="50">
-                <hr>
-                <textarea placeholder="Descrição (máximo de 500 caracteres)" class="conteudo" maxlength="500"></textarea>
-            </aside>
+                </aside>
+                <aside class="textos">
+                    <input type="text" placeholder="Título" class="titulopostagem" required>
+                    <hr>
+                    <textarea placeholder="Descrição..." class="conteudo" onkeydown="if(event.key === 'Enter' && !event.shiftKey) event.preventDefault();" required></textarea>
+                </aside>
+            </div>
         </div>
-    </div>
+    </form>
+    <script src="js/informacoesuser.js"></script>
+    <script src="js/criarpost.js"></script>
 </body>
 </html>
