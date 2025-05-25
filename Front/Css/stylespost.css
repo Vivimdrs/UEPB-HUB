@@ -230,6 +230,7 @@ textarea{
     padding: 5px 5px;
     resize: none;
     overflow: hidden;
+    outline: none;
 }
 
 .botaoenviarcoment{

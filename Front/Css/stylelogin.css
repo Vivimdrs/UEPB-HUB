@@ -1,5 +1,6 @@
 body.bodylogin {
   background: url(../img/fundo-login.jpg) no-repeat center fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -12,12 +13,13 @@ body.bodylogin {
 
 .container-login {
   background: var(--branco);
-  width: 600px;
-  height: 450px;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  padding: 60px 20px 20px 20px;
   border-radius: 10px;
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.6);
   position: relative;
-  padding-top: 60px;
   overflow: hidden;
 }
 
@@ -26,7 +28,8 @@ body.bodylogin {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 80%;
+  max-width: 300px;
   height: 40px;
   background: #adacac;
   border-radius: 30px;
@@ -40,16 +43,16 @@ body.bodylogin {
   position: absolute;
   top: 0;
   left: 0;
-  width: 150px;
+  width: 50%;
   height: 40px;
-  background: linear-gradient(to right,#d11818, #530606);
+  background: linear-gradient(to right, #d11818, #530606);
   border-radius: 30px;
   transition: left 0.3s ease;
   z-index: 0;
 }
 
 .botoessuperiores button {
-  width: 140px;
+  width: 48%;
   height: 40px;
   background: transparent;
   border: none;
@@ -58,14 +61,14 @@ body.bodylogin {
   cursor: pointer;
   z-index: 1;
   position: relative;
-  font-size: 14px;
+  font-size: 0.9em;
 }
+
 form.form {
-  position: absolute;
-  top: 80px;
+  position: relative;
+  /*margin-top: 80px;*/
   width: 100%;
-  height: calc(100% - 100px);
-  padding: 20px;
+  padding: 20px 10px;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -75,42 +78,46 @@ form.form {
 form.form.active {
   display: flex;
 }
+
 .form input {
   background-color: transparent;
   padding: 10px;
   width: 100%;
-  border-bottom: var(--vermelho-uepb) 2px solid;
+  border: var(--vermelho-uepb) 2px solid;
   border-radius: 6px;
   font-size: 0.95em;
   transition: border-color 0.3s ease;
 }
-.form input::placeholder{
+
+.form input::placeholder {
   color: var(--cinza-escuro);
   font-size: 1em;
 }
-form button[type="submit"]
-{
+
+form button[type="submit"] {
   margin: 0 auto;
   border: none;
   border-radius: 6px;
-  width: 200px;
-  height: 30px;
+  width: 60%;
+  max-width: 200px;
+  height: 35px;
   font-weight: bold;
   font-size: 1em;
   cursor: pointer;
   background-color: var(--vermelho-uepb);
   color: var(--branco);
-
 }
+
 form button[type="submit"]:hover {
   background: transparent;
   color: var(--vermelho-uepb);
   transition: background-color 0.4s ease;
   border: var(--vermelho-uepb) 1px solid;
 }
-.titulologin, .titulocriarconta {
-  position: absolute;
-  top: 10px;
+
+.titulologin,
+.titulocriarconta {
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -118,25 +125,29 @@ form button[type="submit"]:hover {
   font-weight: 600;
   color: var(--cinza-escuro);
 }
-.descrição{
+
+.descrição {
   margin-top: 0px;
   margin-bottom: 10px;
   font-size: 0.9em;
   text-align: center;
   color: var(--cinza-escuro);
-} 
+}
+
 input[type="email"]:focus,
-  input[type="password"]:focus, input[type="text"]:focus {
+input[type="password"]:focus,
+input[type="text"]:focus {
   outline: none;
   box-shadow: none;
-  }
+}
 
-.esqueceu{
+.esqueceu {
   color: var(--vermelho-uepb);
   text-decoration: none;
   font-size: 0.9em;
   text-align: center;
 }
-.esqueceu:hover{
-  text-decoration: underline;
+
+.esqueceu:hover {
+  text-decoration: underline;
 }

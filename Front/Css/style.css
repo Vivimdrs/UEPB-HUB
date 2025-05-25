@@ -29,9 +29,19 @@ header {
   z-index: 1000;
 }
 
+/*BARRA DE PESQUISA*/
 .barrapesquisa{
   display: flex;
+  flex-direction: row;
   margin: auto;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.barrapesquisa form {
+  display: flex;
+  align-items: center;
   gap: 5px;
 }
 
@@ -41,6 +51,7 @@ header {
   height: 25px;
   border-radius: 20px;
   border: none;
+  outline: none;
 }
 
 .botaolupa{
@@ -50,6 +61,7 @@ header {
   border: none;
   transition: all 0.3s;
   cursor: pointer;
+  display: flex;
 }
 
 .botaolupa:hover{
@@ -60,6 +72,7 @@ header {
   width: 25px;
   height: 25px;
 }
+/*ATÉ AQUI*/
 
 .icon-bar  {
   display: flex;

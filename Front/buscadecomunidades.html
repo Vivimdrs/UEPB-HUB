@@ -18,8 +18,10 @@
         </div>
 
         <div class="barrapesquisa">
-        <input class="pesquisar" type="text" placeholder="Pesquisar..." onkeyup="pesquisarPosts()">
-        <button onclick="pesquisarPosts()" class="botaolupa"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+            <form action="buscadecomunidades.html" method="get">
+                <input class="pesquisar" type="text" placeholder="Pesquisar..." name="termo">
+                <button class="botaolupa" type="submit"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+            </form>
         </div>
         <div class="icon-bar">
         <button id="sininho">
@@ -27,8 +29,8 @@
         </button>
         <i class="material-icons">account_circle</i>
         </div>
-    </header>
-    <div class="containercomunidade">
+    </header> 
+    <div class="containercomunidade" id="resultados-pesquisa">
         <aside class="capacomunidade">
             <img class="fotocomunidade" src="img/senhordosaneis.jpeg" id="fotocomunidade">
         </aside>

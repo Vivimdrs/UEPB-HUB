@@ -1,21 +1,48 @@
-async function pesquisar(){
-    const termo = document.getElementById("pesquisar").ariaValueMax;
-    const resultados = document.getElementById("");//tem que criar uma pagina pra aparecer os resultado AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-    
-    if(termo.length < 2){
-        resultados.innerHTML = "";
-        return;
-    }
+document.addEventListener('DOMContentLoaded', async () =>{
+    const urlParams = new URLSearchParams(window.location.search);
+    const termo = urlParams.get("termo");
+    const container = document.getElementById("resultados-pesquisa");
 
-    //ei vei tem que ter isso mesmo? pode ficar de fora não? tem que fazer uma pagina todinha a mais, não tinha me ligado *figurinha do gatinho gritando*
-    try{
-        const response = await fetch('API LA DO BANCO DE DADOS'); ///api/posts/pesquisar?termo=${encodeURIComponent(termo)}
-        const comunidades = awai response.json();
+    try {
+        const response = await fetch('http://sua-api.com/comunidades?busca=${encodeURIComponent(termo)}'); //tem que substituir esse link ai pela api, botei só pra saber
+        const comunidades = await response.json();
 
-        resultados.innerHTML = comunidades.map(comunidade => `
-            bota as div aqui dentro`
-        ).join("");
-    }catch(error){
-        resultados.innerHTML = "Erro ao buscar comunidades.";
+        if(comunidades.nome.length === 0){
+            container.innerHTML = `
+                <p class="sem-resultados">Nenhuma comunidade encontrada para "<strong>${termo}</strong>".</p>
+            `;
+        }else{
+            container.innerHTML = comunidades.map(comunidade => `
+                <div class="containercomunidade" id="resultados-pesquisa">
+                    <aside class="capacomunidade">
+                        <img class="fotocomunidade" src="${comunidade.capa}" id="${comunidade.nome}">
+                    </aside>
+                    <aside class="informacoescomunidade">
+                        <h1 class="nomecomunidade" id="nomecomunidade">${comunidade.nome}</h1>
+                        <div class="tags">
+                            <div class="tag1" id="tag1">${comunidade.tags[0] || ''}</div>
+                            <div class="tag2" id="tag2">${comunidade.tags[1] || ''}</div>
+                            <div class="tag3" id="tag3">${comunidade.tags[2] || ''}</div>
+                        </div>
+                        <div class="infoquantidades">
+                            <div class="divqntd">
+                                <span class="quantidade" id="qntmembros">${comunidade.qntmembros}</span>
+                                <p class="p">membros</p>
+                            </div>
+                            <div class="hv"></div>
+                            <div class="divqntd">
+                                <span class="quantidade" id="qntposts">${comunidade.posts}</span>
+                                <p class="p">posts</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            `).join('');
+        }
+    } catch (error) {
+        console.error("Erro na busca: ", error);
+        container.innerHTML = `
+            <p class="erro-busca">Erro ao carregar comunidades. Tente novamente mais tarde.</p>
+        `;
     }
-}
+})

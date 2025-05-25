@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
     <script src="Js/script.js"></script>
+    <script src="Js/pesquisar.js"></script>
 </head>
 <body>
   <header>
@@ -20,8 +21,10 @@
     </div>
 
     <div class="barrapesquisa">
-      <input class="pesquisar" type="text" placeholder="Pesquisar..." onkeyup="pesquisarPosts()">
-      <button onclick="pesquisarPosts()" class="botaolupa"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+      <form action="buscadecomunidades.html" method="get">
+        <input class="pesquisar" type="text" placeholder="Pesquisar..." name="termo">
+        <button class="botaolupa" type="submit"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+      </form>
     </div>
     <div class="icon-bar">
       <button id="sininho">

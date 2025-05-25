@@ -11,6 +11,7 @@
     <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
     
 	<script src= "Js/script.js"></script>
+  <script src="Js/pesquisar.js"></script>
     
 </head>
 <body>
@@ -18,8 +19,10 @@
      <span>Uepb Hub</span>
 
       <div class="barrapesquisa">
-        <input class="pesquisar" type="text" placeholder="Pesquisar..." onkeyup="pesquisarPosts()">
-        <button onclick="pesquisarPosts()" class="botaolupa"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+        <form action="buscadecomunidades.html" method="get">
+          <input class="pesquisar" type="text" placeholder="Pesquisar..." name="termo">
+          <button class="botaolupa" type="submit"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+        </form>
       </div>
       <div class="icon-bar">
       <button id="sininho">
