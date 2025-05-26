@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="Css/styletelaprincipal.css">
     <link rel="stylesheet" href="Css/normalizer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
     <script src="Js/script.js"></script>
+    <script src="Js/pesquisar.js"></script>
+    <script src="Js/mapeamentocampus.js"></script>
 </head>
 <body>
   <header>
@@ -18,6 +21,12 @@
       <span>UEPB HUB</span>
     </div>
 
+    <div class="barrapesquisa">
+      <form action="buscadecomunidades.html" method="get">
+        <input class="pesquisar" type="text" placeholder="Pesquisar..." name="termo">
+        <button class="botaolupa" type="submit"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+      </form>
+    </div>
     <div class="icon-bar">
       <button id="sininho">
         <i class="material-icons">notifications</i>
@@ -32,37 +41,37 @@
               <h2>Bem-vindo(a) ao Uepb HUB — conectando estudantes, ideias e oportunidades em todos os campi da nossa Universidade!</h2>
             </div>
               <article id="campi">
-                <div class="campus">
+                <div class="campus" id="campus1" onclick="redirecionarParaCampus(this.id)">
                   <img src="img/uepb1.jpg" alt="Campus I - Campina Grande">
                   <p>Campus I - Campina Grande</p>
                 </div>
-                <div class="campus">
+                <div class="campus" id="campus2" onclick="redirecionarParaCampus(this.id)">
                   <img src="img/campus 2.jpeg" alt="Campus II - Lagoa Seca">
                   <p>Campus II - Lagoa Seca</p>
                 </div>
-                <div class="campus">
+                <div class="campus" id="campus3" onclick="redirecionarParaCampus(this.id)">
                   <img src="img/campus3.jpeg" alt="Campus III - Guarabira">
                   <p>Campus III - Guarabira</p>
                 </div>
-                <div class="campus">
+                <div class="campus" id="campus4" onclick="redirecionarParaCampus(this.id)">
                   <img src="img/campus4.jpg" alt="Campus IV - Catolé do Rocha">
                   <p>Campus IV - Catolé do Rocha</p>
                 </div>
-                <div class="campus">
+                <div class="campus" id="campus5" onclick="redirecionarParaCampus(this.id)">
                   <img src="img/campus5v.jpg" alt="Campus V - João Pessoa">
                   <p>Campus V - João Pessoa</p>
                 </div>
-                <div class="campus">
+                <div class="campus" id="campus6" onclick="redirecionarParaCampus(this.id)">
                   <img src="img/campos6.jpg" alt="Campus VI - Monteiro">
                   <p>Campus VI - Monteiro</p>
                 </div>
-                <div class="campus">
-                  <a href="comunidades.html">
+                <div class="campus" id="campus7" onclick="redirecionarParaCampus(this.id)">
+                  <a href="comunidades.html?campus_id=CAMPUSVII">
                     <img src="img/campus 7.webp" alt="Campus VII - Patos">
                   </a>
                   <p>Campus VII - Patos</p>
                 </div>
-                <div class="campus">
+                <div class="campus" id="campus8" onclick="redirecionarParaCampus(this.id)">
                   <img src="img/campus8.jpeg" alt="Campus VIII - Araruna">
                   <p>Campus VIII - Araruna</p>
                 </div>

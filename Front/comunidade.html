@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/normalizer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
+    <script src="Js/token.js"></script>
+    <script src="Js/pesquisar.js"></script>
 </head>
 <body>
     <header>
@@ -15,6 +18,12 @@
         <span>UEPB HUB</span>
         </div>
 
+        <div class="barrapesquisa">
+            <form action="buscadecomunidades.html" method="get">
+                <input class="pesquisar" type="text" placeholder="Pesquisar..." name="termo">
+                <button class="botaolupa" type="submit"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+            </form>
+        </div>
         <div class="icon-bar">
         <button id="sininho">
             <i class="material-icons">notifications</i>
@@ -24,36 +33,55 @@
     </header>
     <div class="informacoescomunidade">
         <aside class="fotocapacomunidade">
-            <img class="capacomunidade" alt="Capa da comunidade" src="img/Game_of_thrones.jpg" id="capacomunidade">
+            <img class="capacomunidade" alt="Capa da comunidade" src="" id="capacomunidade">
         </aside>
         <aside class="cardinfocomunidade">
-            <h1 class="nomecomunidade" id="nomecomunidade">GOT</h1>
-            <div class="tags">
-                <div class="tag1" id="tag1">livro</div>
-                <div class="tag2" id="tag2">serie</div>
-                <div class="tag3" id="tag3">fantasia</div>
+            <div class="titulo_botao">
+                <h1 class="nomecomunidade" id="nomecomunidade"></h1>
+                <button class="seguircomunidade" id="seguircomunidade">
+                    <img src="img/127 Sem Título_20250524145524.png" alt="Botão de seguir comunidade" class="seguiricon" id="seguiricon">
+                </button>
             </div>
-            <div class="infoquantidades">
-                <div class="divmembros">
-                    <span class="qntmembros" id="qntmembros">123</span>
-                    <p class="membros">membros</p>
+            <div class="infodebaixo">
+                <div class="tags">
+                    <div class="tag1" id="tag1"></div>
+                    <div class="tag2" id="tag2"></div>
+                    <div class="tag3" id="tag3"></div>
                 </div>
-                <div class="hv"></div>
-                <div class="divposts">
-                    <span class="qntposts" id="qntposts">123</span>
-                    <p class="posts">posts</p>
+                <div class="infoquantidades">
+                    <div class="divqntd">
+                        <span class="quantidade" id="qntmembros"></span>
+                        <p class="p">membros</p>
+                    </div>
+                    <div class="hv"></div>
+                    <div class="divqntd">
+                        <span class="quantidade" id="qntposts"></span>
+                        <p class="p">posts</p>
+                    </div>
                 </div>
             </div>
         </aside>
     </div>
-    <div class="separador">Posts</div>
+    <div class="separador">POSTS</div>
     <div class="postagens">
-        <div>
-            <span class="titulopostagem" id="titulopostagem">titulo</span>
-            <img class="iconautorpostagem" alt="Icon do autor do post" src="img/adicionar_imagem.png" id="iconautorpostagem">
-            <span class="autorpostagem" id="autorpostagem">user_</span>
-            <img class="capapostagem" alt="Capa da postagem" src="img/got.jpg" id="capapostagem">
-        </div>
+        <a href="post.html?id=1" class="linkpost">
+            <div class="postcomunidade">
+                <div class="containertitulo">
+                    <span class="titulopostagem" id="titulopostagem"></span>
+                </div>
+            <hr class="hr">
+            <div class="icon_autor">
+                <img class="iconautorpostagem" alt="Icon do autor do post" src="" id="iconautorpostagem">
+                <span class="autorpostagem" id="autorpostagem"></span>
+            </div>
+                <img class="capapostagem" alt="Capa da postagem" src="img/got.jpg" id="capapostagem">
+            </div>
+        </a>
     </div>
+    <a href="#" class="botaocriarpost" id="botaocriarpost"><i class="material-icons">add</i></a>
+    <script src="Js/carregarcomunidade.js"></script>
+    <script src="Js/postscomunidade.js"></script>
+    <script src="Js/apiseguir.js"></script>
+    <script src="Js/seguircomunidade.js"></script>
 </body>
 </html>

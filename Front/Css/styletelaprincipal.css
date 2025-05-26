@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9734d38cb7d254183da1e90d0d7f5de4320521d4
 #conteudo {
   width: 90%;
   max-width: 810px;
@@ -134,5 +137,10 @@ aside#news a.button:hover {
 }
 
 aside#news > div:not(:last-child) {
+<<<<<<< HEAD
   margin-bottom: 20px;
 }
+=======
+  margin-bottom: 20px;
+}
+>>>>>>> 9734d38cb7d254183da1e90d0d7f5de4320521d4

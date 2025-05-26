@@ -66,7 +66,11 @@ body.bodylogin {
 
 form.form {
   position: relative;
+<<<<<<< HEAD
   margin-top: 80px;
+=======
+  /*margin-top: 80px;*/
+>>>>>>> 9734d38cb7d254183da1e90d0d7f5de4320521d4
   width: 100%;
   padding: 20px 10px;
   display: none;
@@ -149,5 +153,10 @@ input[type="text"]:focus {
 }
 
 .esqueceu:hover {
+<<<<<<< HEAD
   text-decoration: underline;
 }
+=======
+  text-decoration: underline;
+}
+>>>>>>> 9734d38cb7d254183da1e90d0d7f5de4320521d4

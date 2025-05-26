@@ -87,6 +87,7 @@ h1{
 .titulopostagem, .conteudo {
     width: 100%;
     padding: 5px;
+    outline: none;
 }
 
 input::placeholder, textarea::placeholder {

@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/normalizer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="Js/botaolike.js"></script>
-    <script src="Js/scrollcomentarios.js"></script>
-    <script src="Js/enviarcomentario.js"></script>
-    <script src="Js/receberinfonovocoment.js"></script>
+    <link href="img/uepb_hub_logo-removebg-preview.png" rel="icon" type="image/png">
+    <script src="Js/pesquisar.js"></script>
 </head>
 <body>
     <header>
@@ -19,6 +17,12 @@
         <span>UEPB HUB</span>
         </div>
 
+        <div class="barrapesquisa">
+            <form action="buscadecomunidades.html" method="get">
+                <input class="pesquisar" type="text" placeholder="Pesquisar..." name="termo">
+                <button class="botaolupa" type="submit"><img src="img/lupa.png" alt="Lupa de pesquisa" class="lupa"></button>
+            </form>
+        </div>
         <div class="icon-bar">
         <button id="sininho">
             <i class="material-icons">notifications</i>
@@ -67,5 +71,9 @@
             <div class="conteudopostagem" id="conteudopostagem"></div>
         </aside>
     </div>
+    <script src="Js/botaolike.js"></script>
+    <script src="Js/enviarcomentario.js"></script>
+    <script src="Js/receberinfonovocoment.js"></script>
+    <script src="Js/informacoespost.js"></script>
 </body>
 </html>

@@ -44,6 +44,7 @@
   background-color: white;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   text-align: center;
+  transition: all 0.3s;
 }
 
 .nav {
@@ -130,4 +131,10 @@ footer{
 }
 footer>p a{
   padding: 2px 10px;
+}
+
+.linkcomunidade{
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }

@@ -87,7 +87,7 @@
 .botaolike img{
     width: 25px;
     height: 25px;
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
 .botaolike.active img{
@@ -230,6 +230,7 @@ textarea{
     padding: 5px 5px;
     resize: none;
     overflow: hidden;
+    outline: none;
 }
 
 .botaoenviarcoment{
@@ -240,9 +241,14 @@ textarea{
     width: 30px;
     height: 30px;
     gap: 6px;
+    transition: all 0.3s;
 }
 
 .botaoenviarcoment img{
     width: 30px;
     height: 30px;
+}
+
+.botaoenviarcoment:hover{
+    transform: scale(1.1);
 }
