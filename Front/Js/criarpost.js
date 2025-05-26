@@ -6,7 +6,7 @@ document.getElementById('formcriarpost').addEventListener('submit', async (e) =>
     const capapost = document.querySelector(".imagempostagem").files[0];
     const titulopost = document.querySelector(".titulopostagem").value;
     const conteudopost = document.querySelector(".conteudo").value;
-    const usuarioId = localStorage.getItem('token');
+    const usuarioId = localStorage.getItem('matricula');
 
     alert("Dados a serem enviados: " + JSON.stringify({
         comunidadeId,

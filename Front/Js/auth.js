@@ -23,8 +23,10 @@ formLogin.addEventListener('submit', async (e) => {
         }
 
         const data = await response.json();
-
         localStorage.setItem('matricula', data.matricula);
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('nomeDeUsuario', data.nomeDeUsuario);
+        localStorage.setItem('campus', data.campus);
 
         alert('Login realizado com sucesso!');
         window.location.href = 'telaprincipal.html';
