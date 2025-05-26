@@ -1,20 +1,36 @@
-document.addEventListener('DOMContentLoaded', async () =>{
+document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get("id");
 
-    try {
-        const response = await fetch('http://sua-api.com/posts/${postId}'); //tem que substituir esse link ai pela api, botei só pra saber
-        const post = await response.json();
+    if (!postId) {
+        alert('ID do post não encontrado na URL');
+        window.location.href = 'telaprincipal.html';
+        return;
+    }
 
-        document.getElementById("informacoes-post").innerHTML = `
-            <h1 class="titulopostagem" id="titulopostagem">${post.titulo}</h1>
-            <hr class="hrstyle">
-            <img class="capapostagem" alt="Imagem do post" src="${post.capa}" id="capapostagem">
-            <div class="conteudopostagem" id="conteudopostagem">${post.conteudo}</div>`
+    try {
+        const response = await fetch(`http://localhost:8080/posts/${postId}`);
+        if (!response.ok) {
+            throw new Error(`Erro ao buscar post: ${response.status}`);
+        }
+
+        const post = await response.json();
+        console.log("Post recebido:", post);
+
+        document.getElementById('titulopostagem').textContent = post.titulo;
+        document.getElementById('conteudopostagem').textContent = post.conteudo;
+
+        const capa = document.getElementById('capapostagem');
+        capa.src = post.imagem ? `data:image/png;base64,${post.imagem}` : 'img/capapadrao.png';
+
+        // Informações do autor
+        document.getElementById('username').textContent = post.autorNome;
+        document.getElementById('campus').textContent = post.autorCampus;
+        const iconUser = document.getElementById('iconuserautor');
+        iconUser.src = 'img/iconpadrao.png'; // Se tiver imagem de perfil, substitui aqui.
+
     } catch (error) {
-        console.error("Erro: ", error);
-        document.getElementById("informacoes-post").innerHTML = `
-            <p>Post não encontrado. <a href="comunidade.html?id=${comunidade.id}">Voltar</a></p>`; //tem que ver onde que pega o id aqui, lembro mais não como faz
+        console.error("Erro ao carregar post:", error);
+        alert('Erro ao carregar dados do post.');
     }
 });
-//tem que pegar as informações do autor do post tbm
