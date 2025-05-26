@@ -1,17 +1,21 @@
-/*tela principal*/
 
-#conteudo{
-  width: 810px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+#conteudo {
+  width: 90%;
+  max-width: 810px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-article#campi{
+
+
+article#campi {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  padding: 40px;
+  padding: 5%;
   max-width: 1000px;
   margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
 }
 
 .campus {
@@ -19,9 +23,10 @@ article#campi{
 }
 
 .campus img {
-  width: 330px;
+  width: 100%;
+  max-width: 330px;
   height: 170px;
-  object-fit: cover; 
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease;
@@ -30,30 +35,31 @@ article#campi{
 .campus img:hover {
   transform: scale(1.05);
 }
+
 #bemvindos {
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.6);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
   color: var(--cinza-escuro);
   padding: 20px;
-  font-size: 17px;
+  font-size: 1.05em;
   border-radius: 10px;
+  margin-top: 20px;
 }
+
+
 .campus p {
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 500;
   color: #2c2c2c;
 }
 
-/*area lateral na tela principal*/
 
-aside{
-  margin-left: 30px;
+aside {
+  margin: 20px auto;
   background-color: #ffffff;
-  width: 240px;
-  height: 100%;
+  width: 90%;
+  max-width: 240px;
   padding: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -66,8 +72,9 @@ aside#news:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 aside#news h3 {
-  font-size: 20px;
+  font-size: 1.1em;
   color: var(--vermelho-uepb);
   text-align: center;
   text-transform: uppercase;
@@ -75,6 +82,7 @@ aside#news h3 {
   margin-bottom: 10px;
   border-bottom: 2px solid var(--vermelho-uepb);
 }
+
 aside#news img {
   width: 100%;
   height: auto;
@@ -86,13 +94,15 @@ aside#news img {
 aside#news img:hover {
   transform: scale(1.03);
 }
+
 aside#news h4 {
-  font-size: 12px;
+  font-size: 0.9em;
   color: #333;
   text-align: center;
   margin-top: 10px;
   font-weight: 600;
 }
+
 #news .noticia {
   background-color: var(--cinza-claro);
   padding: 12px;
@@ -122,6 +132,7 @@ aside#news a.button:hover {
   color: var(--vermelho-uepb);
   border-bottom: var(--vermelho-uepb) 1px solid;
 }
+
 aside#news > div:not(:last-child) {
-  margin-bottom: 20px; /* separa cada “notícia” */
+  margin-bottom: 20px;
 }
