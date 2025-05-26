@@ -291,3 +291,9 @@
 .botaocriarpost:hover{
     transform: scale(1.1);
 }
+
+.linkpost{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

@@ -6,6 +6,7 @@ fetch('')
 
         posts.forEach(post => {
             container.innerHTML += `
+            <a href="post.html?id=${post.id}" class="linkpost">
                 <div class="postcomunidade">
                     <div class="containertitulo"><span class="titulopostagem" id="titulopostagem">${post.titulo}</span></div>
                     <hr class="hr">
@@ -14,7 +15,8 @@ fetch('')
                         <span class="autorpostagem" id="autorpostagem">@${post.userautor}</span>
                     </div>
                     <img class="capapostagem" alt="Capa da postagem" src="${post.capa}" id="capapostagem">
-                </div>`;
+                </div>
+            </a>`;
         });
     })
     .catch(error => {

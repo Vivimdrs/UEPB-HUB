@@ -14,6 +14,7 @@ document.getElementById('formcriarpost').addEventListener('submit', async (e) =>
     formData.append('titulopost', titulopost);
     formData.append('conteudopost', conteudopost);
     formData.append('usuarioId', usuarioId);
+    formData.append('postId', id); //tem que criar o id
 
     try {
         const response = await fetch('', { //dentro das aspas é o link da api de post
