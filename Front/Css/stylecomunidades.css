@@ -6,7 +6,7 @@
 .containercomunidade {
   display: flex;
   flex-direction: row;
-  width: 300px;
+  width: 280px;
   min-height: 180px;
   background-color: white;
   border-radius: 10px;
@@ -19,10 +19,8 @@
   transform: scale(1.03);
 }
 
-
 .card {
   width: 280px;
-  margin-left: 20px;
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
@@ -38,7 +36,7 @@
 
 .card .fotocomunidade {
   width: 100%;
-  height: 180px;
+  height: 140px;
   object-fit: cover;
   display: block;
 }
@@ -51,7 +49,7 @@
   gap: 10px;
 }
 
-.nomecomunidade {
+.nomecomunidade{
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
@@ -66,14 +64,20 @@
   gap: 4px;
 }
 
-.tag {
+.tag, .titulo-comunidades {
   background-color: #eaeaea;
   color: #555;
   font-size: 0.75rem;
   padding: 4px 8px;
   border-radius: 12px;
 }
-
+.titulo-comunidades{
+  font-size: 1.3rem;
+  background-color: #eaeaea;
+  color: #555;
+  padding: 8px 16px;
+  border-radius: 12px;
+}
 .infoquantidades {
   display: flex;
   justify-content: space-around;
@@ -97,6 +101,7 @@
 
 .titulo-comunidades{
   text-align: center;
+  background-color: #ffffff;
 }
 .comunidades-em-linha {
   display: flex;
@@ -104,12 +109,10 @@
   scrollbar-width: none; 
   -ms-overflow-style: none; 
   scroll-behavior: smooth;
-  gap: 1.5em;
-  padding: 20px 0;
+  gap: 2.5em; 
+  padding: 20px 20px; 
   border-radius: 8px;
 }
-
-
 
 .nav {
   position: absolute;
