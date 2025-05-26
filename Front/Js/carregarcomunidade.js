@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         const capa = document.getElementById('capacomunidade');
         capa.src = comunidade.imagem ? `data:image/png;base64,${comunidade.imagem}` : 'img/capapadrao.png';
 
+        const linkCriarPost = document.getElementById("botaocriarpost");
+    if (linkCriarPost) {
+        linkCriarPost.href = `criarpostagem.html?id=${comunidadeId}`;
+    }
+
     } catch (error) {
         console.error("Erro ao carregar comunidade:", error);
         alert('Erro ao carregar dados da comunidade.');

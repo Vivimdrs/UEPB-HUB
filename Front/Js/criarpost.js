@@ -1,32 +1,47 @@
-document.getElementById('formcriarpost').addEventListener('submit', async (e) =>{
+document.getElementById('formcriarpost').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const urlParams = new URLSearchParams(window.location.search);
     const comunidadeId = urlParams.get("id");
-    const capapost = document.getElementById("imagempostagem").files[0];
-    const titulopost = document.getElementById("titulopostagem").value;
-    const conteudopost = document.getElementById("conteudo").value;
-    const usuarioId = localStorage.getItem("usuarioId");
+    const capapost = document.querySelector(".imagempostagem").files[0];
+    const titulopost = document.querySelector(".titulopostagem").value;
+    const conteudopost = document.querySelector(".conteudo").value;
+    const usuarioId = localStorage.getItem('token');
+
+    alert("Dados a serem enviados: " + JSON.stringify({
+        comunidadeId,
+        usuarioId,
+        titulopost,
+        conteudopost,
+        imagem: capapost ? capapost.name : null
+    }, null, 2));
+    
 
     const formData = new FormData();
-    formData.append('comunidadeId', comunidadeId);
-    formData.append('capapost', capapost);
-    formData.append('titulopost', titulopost);
-    formData.append('conteudopost', conteudopost);
-    formData.append('usuarioId', usuarioId);
-    formData.append('postId', id); //tem que criar o id
+    formData.append('titulo', titulopost);
+    formData.append('descricao', conteudopost);
+    formData.append('matricula', usuarioId);
+    formData.append('id_comunidade', comunidadeId);
+    formData.append('imagem', capapost);
 
     try {
-        const response = await fetch('', { //dentro das aspas é o link da api de post
-            method:'POST',
+        const response = await fetch('http://localhost:8080/posts', { 
+            method: 'POST',
             body: formData
         });
-        if(response.ok){
+
+        const result = await response.text();
+
+        if (response.ok) {
             alert("Post criado com sucesso!");
             window.location.href = `comunidade.html?id=${comunidadeId}`;
+        } else {
+            console.error("Erro do servidor:", result);
+            alert("Erro ao salvar post: " + result);
         }
+
     } catch (error) {
-        console.error('Error: ', error);
-        alert("Falha ao criar post.")
+        console.error("Erro na requisição:", error);
+        alert("Falha ao criar post.");
     }
 });
