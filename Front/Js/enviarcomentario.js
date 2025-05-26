@@ -1,8 +1,9 @@
 async function enviarcomentario(){
     const comentario = document.getElementById("novocomentario").value;
     
-    //const postId = não sei, sei que tem que pegar o id
-    //const usuarioId = msm coisa do id do post
+    const urlParams = new URLSearchParams(window.location.seacrh);
+    const postId = urlParams.get(postId);
+    const usuarioId = localStorage.getItem('matricula');
 
     if(comentario.trim() === ''){
         alert('Não é possível enviar comentário vazio.');
@@ -42,5 +43,5 @@ function adicionarComentarionaTela(comentario){
             <img class="iconusercoment" alt="Icon de usuario" src="${comentario.iconusercoment}" id="iconusercoment">
             <span class="usernamecoment" id="usernamecoment">@${comentario.userautorcoment}</span>
         </div>
-        <p class="comentarios" id="comentarios">${comentario.coment}</p>`
+        <p class="comentarios" id="comentarios">${comentario.coment}</p>`;
 }
