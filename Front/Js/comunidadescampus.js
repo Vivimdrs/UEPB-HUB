@@ -6,31 +6,30 @@ document.addEventListener('DOMContentLoaded', async () =>{
         const container = document.querySelector(seletor);
     
         container.innerHTML = comunidades.map(comunidade => `
-            <a href="comunidade.html?id=${comunidade.id}" class="link-comunidade">
-                <div class="containercomunidade">
-                    <aside class="capacomunidade">
-                        <img class="fotocomunidade" src="http://localhost:8080/communities/${comunidade.id}/imagem" alt="${comunidade.nome}">
-                    </aside>
-                    <aside class="informacoescomunidade">
-                        <h1 class="nomecomunidade">${comunidade.nome}</h1>
-                        <div class="tags">
-                            ${(comunidade.tags || []).map(tag => `<div class="tag">${tag}</div>`).join('')}
-                        </div>
-                        <div class="infoquantidades">
-                            <div class="divqntd">
-                                <span class="quantidade">${(comunidade.usersIds || []).length}</span>
-                                <p class="p">membros</p>
-                            </div>
-                            <div class="hv"></div>
-                            <div class="divqntd">
-                                <span class="quantidade">${(comunidade.posts || []).length}</span>
-                                <p class="p">posts</p>
-                            </div>
-                        </div>
-                    </aside>
+    <a href="comunidade.html?id=${comunidade.id}" class="linkcomunidade">
+        <div class="card">
+            <img class="fotocomunidade" src="http://localhost:8080/communities/${comunidade.id}/imagem" alt="${comunidade.nome}">
+            <div class="informacoescomunidade">
+                <h1 class="nomecomunidade">${comunidade.nome}</h1>
+                <div class="tags">
+                    ${(comunidade.tags || []).map(tag => `<div class="tag">${tag}</div>`).join('')}
                 </div>
-            </a>
-        `).join('');
+                <div class="infoquantidades">
+                    <div class="divqntd">
+                        <span class="quantidade">${(comunidade.usersIds || []).length}</span>
+                        <p class="p">membros</p>
+                    </div>
+                    <div class="hv"></div>
+                    <div class="divqntd">
+                        <span class="quantidade">${(comunidade.posts || []).length}</span>
+                        <p class="p">posts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+`).join('');
+
     }
 
     try {
