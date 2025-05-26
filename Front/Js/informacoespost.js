@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log("Post recebido:", post);
 
         document.getElementById('titulopostagem').textContent = post.titulo;
-        document.getElementById('conteudopostagem').textContent = post.conteudo;
+        document.getElementById('conteudopostagem').textContent = post.descricao;
 
         const capa = document.getElementById('capapostagem');
         capa.src = post.imagem ? `data:image/png;base64,${post.imagem}` : 'img/capapadrao.png';
 
         // Informações do autor
-        document.getElementById('username').textContent = post.autorNome;
-        document.getElementById('campus').textContent = post.autorCampus;
+        document.getElementById('nomeDeUsuario').textContent = post.author.nomeDeUsuario;
+        document.getElementById('campus').textContent = post.campus;
         const iconUser = document.getElementById('iconuserautor');
         iconUser.src = 'img/iconpadrao.png'; // Se tiver imagem de perfil, substitui aqui.
 
