@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                         <hr class="hr">
                         <div class="icon_autor">
-                            <img class="iconautorpostagem" src="img/iconpadrao.png" alt="Icon do autor">
                             <span class="autorpostagem">${post.author.nomeDeUsuario}</span>
                         </div>
                         <img class="capapostagem" src="${post.imagem ? `data:image/png;base64,${post.imagem}` : 'img/capapadrao.png'}" alt="Capa da postagem">

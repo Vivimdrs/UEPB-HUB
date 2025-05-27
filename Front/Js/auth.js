@@ -48,19 +48,6 @@ formCriar.addEventListener('submit', async (e) => {
     const imagem = formCriar.querySelector('input[name="imagem"]').files[0];
     const descricao = formCriar.querySelector('textarea[name="descricao"]').value;
 
-    alert(
-        `Nome: ${nome},
-        Nome de Usuário: ${nomeDeUsuario},
-        Matrícula: ${matricula},
-        Email: ${email},
-        Data de Nascimento: ${dataNascimento},
-        Senha: ${senha},
-        Confirmar Senha: ${confirmarSenha},
-        Imagem: ${imagem ? imagem.name : 'Nenhuma selecionada'},
-        Descrição: ${descricao}`
-    );
-
-
     if (senha !== confirmarSenha) {
         alert('As senhas não coincidem!');
         return;
