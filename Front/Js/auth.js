@@ -42,12 +42,12 @@ formCriar.addEventListener('submit', async (e) => {
     const nome = inputs[0].value;
     const nomeDeUsuario = inputs[1].value;
     const matricula = inputs[2].value;
-    const email = inputs[3].value;
-    const dataNascimento = inputs[4].value;
-    const senha = inputs[5].value;
-    const confirmarSenha = inputs[6].value;
-    const fotoPerfil = inputs[7].files[0];
-    const biografia = inputs[8].value;
+    const email = inputs[4].value;
+    const dataNascimento = inputs[5].value;
+    const senha = inputs[6].value;
+    const confirmarSenha = inputs[7].value;
+    const imagem = inputs[8].files[0];
+    const descricao = inputs[9].value;
 
     if (senha !== confirmarSenha) {
         alert('As senhas não coincidem!');
@@ -66,8 +66,8 @@ formCriar.addEventListener('submit', async (e) => {
     formData.append('curso', curso);
     formData.append('dataNascimento', dataNascimento);
     formData.append('senha', senha);
-    formData.append('descricao', biografia);
-    formData.append('imagem', fotoPerfil); 
+    formData.append('descricao', descricao);
+    formData.append('imagem', imagem); 
     try {
         const response = await fetch('http://localhost:8080/users', {
             method: 'POST',

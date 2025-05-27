@@ -1,0 +1,15 @@
+.informacoes-perfil{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.fotoPerfil{
+    width: 40%;
+}
+
+.informacoes-diversas{
+    width: 60%s;
+}
