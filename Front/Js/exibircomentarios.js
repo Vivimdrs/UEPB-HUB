@@ -11,7 +11,7 @@ document.addEventListener('DOMException', async () =>{
         const comentarios = await responseComentarios.json();
 
         comentarios.forEach(comentario => {
-            adicionarComentarionaTela(comentario); //a função dessa aqui ta lá em enviarcomentario.js
+            adicionarComentarionaTela(comentario); 
         });
     } catch (error) {
         console.log("Erro ao carregar comentários: ", error);

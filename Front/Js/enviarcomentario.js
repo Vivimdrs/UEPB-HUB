@@ -1,8 +1,8 @@
 async function enviarcomentario(){
     const comentario = document.getElementById("novocomentario").value;
     
-    const urlParams = new URLSearchParams(window.location.seacrh);
-    const postId = urlParams.get(postId);
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get("postId");
     const usuarioId = localStorage.getItem('matricula');
 
     if(comentario.trim() === ''){
@@ -23,7 +23,7 @@ async function enviarcomentario(){
                 usuarioId: usuarioId})
         });
 
-        if(!Response.ok){
+        if(!response.ok){
             throw new Error('Erro ao enviar comentário');
         }
         
