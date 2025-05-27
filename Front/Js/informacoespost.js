@@ -24,10 +24,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         capa.src = post.imagem ? `data:image/png;base64,${post.imagem}` : 'img/capapadrao.png';
 
         // Informações do autor
-        document.getElementById('nomeDeUsuario').textContent = post.author.nomeDeUsuario;
+        document.getElementById('autorpostagem').textContent = post.author.nomeDeUsuario;
         document.getElementById('campus').textContent = post.author.campus;
         const iconUser = document.getElementById('iconuserautor');
-        iconUser.src = 'img/iconpadrao.png'; // Se tiver imagem de perfil, substitui aqui.
+        iconUser.src =  iconUser.src = post.author.imagem ? `data:image/png;base64,${post.author.imagem}`: 'img/capapadrao.png';
+
 
     } catch (error) {
         console.error("Erro ao carregar post:", error);
