@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Informações do autor
         document.getElementById('nomeDeUsuario').textContent = post.author.nomeDeUsuario;
-        document.getElementById('campus').textContent = post.campus;
+        document.getElementById('campus').textContent = post.author.campus;
         const iconUser = document.getElementById('iconuserautor');
         iconUser.src = 'img/iconpadrao.png'; // Se tiver imagem de perfil, substitui aqui.
 

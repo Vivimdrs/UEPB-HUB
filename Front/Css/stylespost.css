@@ -46,7 +46,6 @@
     transform: scale(1.1);
 }
 
- 
 .informacoes{
     width: 100%;
     display: flex;
@@ -196,10 +195,11 @@
     border-radius: 10px;
 }
 
-.conteudopostagem{
-    color: white;
-    margin-left: 5px;
-    margin-right: 15px;
+.conteudo{
+    color: #ffffff;
+    margin: 10px 15px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .iconuser{

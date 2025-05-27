@@ -38,16 +38,28 @@ formLogin.addEventListener('submit', async (e) => {
 formCriar.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const inputs = formCriar.querySelectorAll('input');
-    const nome = inputs[0].value;
-    const nomeDeUsuario = inputs[1].value;
-    const matricula = inputs[2].value;
-    const email = inputs[4].value;
-    const dataNascimento = inputs[5].value;
-    const senha = inputs[6].value;
-    const confirmarSenha = inputs[7].value;
-    const imagem = inputs[8].files[0];
-    const descricao = inputs[9].value;
+    const nome = formCriar.querySelector('input[name="nome"]').value;
+    const nomeDeUsuario = formCriar.querySelector('input[name="nomeDeUsuario"]').value;
+    const matricula = formCriar.querySelector('input[name="matricula"]').value;
+    const email = formCriar.querySelector('input[name="email"]').value;
+    const dataNascimento = formCriar.querySelector('input[name="dataNascimento"]').value;
+    const senha = formCriar.querySelector('input[name="senha"]').value;
+    const confirmarSenha = formCriar.querySelector('input[name="confirmarSenha"]').value;
+    const imagem = formCriar.querySelector('input[name="imagem"]').files[0];
+    const descricao = formCriar.querySelector('textarea[name="descricao"]').value;
+
+    alert(
+        `Nome: ${nome},
+        Nome de Usuário: ${nomeDeUsuario},
+        Matrícula: ${matricula},
+        Email: ${email},
+        Data de Nascimento: ${dataNascimento},
+        Senha: ${senha},
+        Confirmar Senha: ${confirmarSenha},
+        Imagem: ${imagem ? imagem.name : 'Nenhuma selecionada'},
+        Descrição: ${descricao}`
+    );
+
 
     if (senha !== confirmarSenha) {
         alert('As senhas não coincidem!');
@@ -68,6 +80,7 @@ formCriar.addEventListener('submit', async (e) => {
     formData.append('senha', senha);
     formData.append('descricao', descricao);
     formData.append('imagem', imagem); 
+
     try {
         const response = await fetch('http://localhost:8080/users', {
             method: 'POST',
@@ -82,6 +95,6 @@ formCriar.addEventListener('submit', async (e) => {
         formCriar.reset();
         document.getElementById('btnLogin').click();
     } catch (error) {
-        alert('Erro no cadastro: ' + error.message+ dataNascimento);
+        alert('Erro no cadastro: ' + error.message);
     }
 });
